@@ -1,1 +1,31 @@
-{"id":"./","name":"높:흉노2지 — Life RPG","short_name":"흉노2지","description":"공부 시간을 사냥 경험치와 골드로 전환하는 RPG 타이머","lang":"ko","start_url":"./index.html","scope":"./","display":"fullscreen","display_override":["fullscreen","standalone"],"orientation":"any","background_color":"#0b111c","theme_color":"#0b111c","icons":[{"src":"./icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"./icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]}
+{
+  "id": "./",
+  "name": "시간의 정원",
+  "short_name": "시간의 정원",
+  "description": "공부 시간을 사냥 경험치와 골드로 전환하는 RPG 타이머",
+  "lang": "ko",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
+  "orientation": "any",
+  "background_color": "#0b111c",
+  "theme_color": "#0b111c",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
