@@ -31,7 +31,7 @@
 </head>
 <body>
 <main class="app">
- <header class="heading"><div><div class="eyebrow">LIFE RPG · STUDY FARMING</div><div class="heading-main"><h1>높:흉노2지</h1></div><div class="subtitle">모험에 집중하며 경험치와 골드를 획득하세요.</div></div><div class="header-right"><div class="loot-strip"><span class="character" id="character">이채쏠 <strong>Lv.1</strong></span><span>처치한 선우 수 <b id="bossCount">0</b></span><span>솔 에르다 조각 <b id="sol">0</b></span><span>선우의 목걸이 <b id="necklace">0</b></span><span>선우의 검조각 <b id="swordPiece">0</b></span><span>용형도 <b id="dragon">0</b></span></div><span class="tag" id="badge">● 대기 중</span></div></header>
+ <header class="heading"><div><div class="eyebrow">LIFE RPG · STUDY FARMING</div><div class="heading-main"><h1>시간의 정원 🌳</h1></div><div class="subtitle">모험에 집중하며 경험치와 골드를 획득하세요.</div></div><div class="header-right"><div class="loot-strip"><span class="character" id="character">이채쏠 <strong>Lv.1</strong></span><span>처치한 선우 수 <b id="bossCount">0</b></span><span>솔 에르다 조각 <b id="sol">0</b></span><span>선우의 목걸이 <b id="necklace">0</b></span><span>선우의 검조각 <b id="swordPiece">0</b></span><span>용형도 <b id="dragon">0</b></span></div><span class="tag" id="badge">● 대기 중</span></div></header>
  <div class="layout">
   <section class="panel hunt"><div class="glyph">⏳</div><div class="area">사냥터 · 높:흉노2지</div><div class="time" id="timer">00:00:00</div><div class="status" id="status">모험을 시작할 준비가 되었습니다.</div><div class="progress"><div id="bar"></div></div><div class="kill" id="kill">몬스터 출현 대기 중</div><div class="small" id="next">몬스터 처치 시 경험치 · 골드 획득</div><div class="actions"><button id="start" class="primary">▶ 사냥 시작</button><button id="pause" class="secondary" disabled>Ⅱ 일시정지</button><button id="finish" class="danger" disabled>■ 사냥 종료</button></div></section>
   <aside class="stack"><section class="panel"><h2 class="title">이번 사냥</h2><div class="stats"><div class="stat"><div class="small">획득 경험치</div><div class="val green" id="sessionXp">0</div><div class="small">EXP</div></div><div class="stat"><div class="small">획득 골드</div><div class="val gold" id="sessionGold">0</div><div class="small">GOLD</div></div></div><div class="divider"></div><h2 class="title">보유 재화</h2><div class="row"><span class="muted">누적 경험치</span><strong class="green" id="totalXp">0 EXP</strong></div><div class="row"><span class="muted">누적 골드</span><strong class="gold" id="totalGold">0 G</strong></div><div class="row"><span class="muted">총 사냥 시간</span><strong id="totalTime">0분</strong></div></section><section class="panel farm-panel"><div class="panel-top"><h2 class="title">사냥 로그</h2><span class="small">모험 중</span></div><div class="farm-info"><span>흉노평민, 흉노전사, 흉노무사 / 흉폭한선우</span><span>초당 1~2마리</span></div><div class="hunt-log" id="huntLog" role="log" aria-live="off"><div class="log-empty">사냥을 시작하면 처치 로그가 표시됩니다.</div></div></section><section class="panel"><h2 class="title">최근 사냥 기록</h2><ul class="history" id="history"><li class="muted">기록이 없습니다.</li></ul></section></aside>
@@ -80,10 +80,10 @@ if(rand(s)<.001){type='boss';name='선우';xp=BOSS_XP;state.inventory.bossCount+
 s.kills++;s.earnedXp+=xp;s.earnedGold+=GOLD_PER_KILL;
 addLog(s,type,type==='boss'?`선우를 처치하였습니다. 경험치가 ${fmt(xp)} 올랐습니다.`:`경험치가 ${fmt(xp)} 올랐습니다.`);
 if(type==='boss'){
- state.inventory.sol+=10;s.soundSol=true;addLog(s,'sol','솔 에르다 조각을 획득하였습니다.');
+ state.inventory.sol+=(rand(s)<.8?1:2);s.soundSol=true;addLog(s,'sol','솔 에르다 조각을 획득하였습니다.');
  if(rand(s)<.10){let item=rand(s)<.5?'necklace':'swordPiece';state.inventory[item]++;addLog(s,'rare',item==='necklace'?'선우의 목걸이를 획득하였습니다.':'선우의 검조각을 획득하였습니다.')}
  if(rand(s)<.01){state.inventory.dragon++;addLog(s,'dragon','용형도를 획득하였습니다.')}
-}else if(rand(s)<.01){state.inventory.sol++;s.soundSol=true;addLog(s,'sol','솔 에르다 조각을 획득하였습니다.')}
+}else if(rand(s)<.0008){state.inventory.sol++;s.soundSol=true;addLog(s,'sol','솔 에르다 조각을 획득하였습니다.')}
 }
 function settle(){let s=state.session;if(!s)return;let full=Math.floor(secs());if(full<=s.processedSeconds)return;let prevLevel=levelFor(state.totalXp+s.earnedXp);s.soundBoss=false;s.soundSol=false;
 if(!s.rng){s.rng=seed();s.twoKillChance=.5;s.log=[];s.monsters={'흉노평민':0,'흉노전사':0,'흉노무사':0,'선우':0}}
