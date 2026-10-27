@@ -1,5 +1,5 @@
 // v1.2 two-region - Network-first documents prevent stale installed PWA shells.
-const CACHE='time-garden-v121';
+const CACHE='time-garden-v122';
 const ASSETS=['./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./bgm.mp3','./bgm-snow.mp3'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>(key.startsWith('hungno-pwa-')||key.startsWith('time-garden-'))&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});
