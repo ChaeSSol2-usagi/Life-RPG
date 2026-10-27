@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#0b111c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="./manifest.webmanifest?v=091"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
-<title>시간의 정원 🌳 | v0.9.1</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><meta name="theme-color" content="#0b111c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="./manifest.webmanifest?v=120"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<title>시간의 정원 🌳 | v1.2</title>
 <style>
 :root{color-scheme:dark;--bg:#0b111c;--panel:#151e2e;--panel2:#1c293b;--line:#324358;--text:#f1f5fb;--muted:#9baec4;--green:#4ee0a2;--gold:#ffd16a}*{box-sizing:border-box}html,body{margin:0;min-height:100%;}body{background:radial-gradient(ellipse at 50% 30%,#1e3046 0%,#0b111c 72%);color:var(--text);font-family:system-ui,-apple-system,'Malgun Gothic',sans-serif;min-height:100dvh;display:grid;place-items:center;padding:clamp(10px,1.8vh,22px)}.app{width:min(1330px,100%);height:min(840px,calc(100dvh - 2.8vh));min-height:0;display:flex;flex-direction:column}.heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:clamp(8px,1.5vh,17px);flex:none}.eyebrow{color:var(--gold);font-size:clamp(10px,1.15vh,13px);letter-spacing:2px;font-weight:800}.heading h1{margin:3px 0;font-size:clamp(24px,4vh,38px)}.subtitle,.muted{color:var(--muted)}.subtitle{font-size:clamp(11px,1.4vh,14px)}.tag{padding:8px 12px;border-radius:99px;background:#273348;color:#cfdded;border:1px solid #46546a;font-size:12px}.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);gap:clamp(10px,1.5vw,18px);flex:1;min-height:0}.panel{background:linear-gradient(145deg,#1b293b,#121b2b);border:1px solid var(--line);border-radius:18px;padding:clamp(14px,2.1vh,27px);box-shadow:0 12px 32px #0004;min-height:0}.hunt{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}.glyph{font-size:clamp(33px,7vh,65px);filter:drop-shadow(0 8px 24px #dfa95166);margin:0 0 4px}.area{font-size:clamp(12px,1.5vh,15px);color:var(--gold);font-weight:700}.time{font-size:clamp(46px,7.4vw,93px);letter-spacing:-3px;font-weight:800;font-variant-numeric:tabular-nums;margin:clamp(6px,2vh,22px) 0 6px}.status{color:var(--muted);font-size:clamp(12px,1.5vh,15px);min-height:20px}.progress{width:100%;height:9px;background:#344157;border-radius:100px;overflow:hidden;margin:clamp(10px,3vh,28px) 0 10px}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#29af89,#6df5b2);transition:width .25s}.small{font-size:clamp(11px,1.3vh,13px);color:var(--muted)}.actions{display:flex;gap:8px;width:100%;margin-top:clamp(12px,3vh,27px)}button{font:inherit;cursor:pointer;border-radius:11px;padding:clamp(9px,1.7vh,15px) 10px;border:1px solid #415168;background:#28374b;color:#f3f6ff;font-weight:700}button:hover:not(:disabled){filter:brightness(1.16)}button:disabled{cursor:not-allowed;opacity:.4}.primary{background:#2eb98e;color:#081d17;border-color:#2eb98e;flex:1}.secondary{flex:1}.danger{background:#3b2a35;border-color:#745260}.stack{display:grid;grid-template-rows:auto auto minmax(90px,1fr);gap:clamp(8px,1.3vh,15px);min-height:0}.stack .panel{overflow:hidden}.title{font-weight:800;font-size:clamp(14px,1.8vh,17px);margin:0 0 clamp(8px,1.5vh,16px)}.stats{display:grid;grid-template-columns:1fr 1fr;gap:9px}.stat{background:#111c2b;border:1px solid #344358;border-radius:13px;padding:clamp(9px,1.4vh,15px);min-width:0}.stat .val{font-size:clamp(20px,2.5vw,30px);font-weight:800;margin-top:4px;overflow-wrap:anywhere}.green{color:var(--green)}.gold{color:var(--gold)}.divider{height:1px;background:var(--line);margin:clamp(10px,1.7vh,18px) 0}select{background:#111c2b;color:#f1f5fb;padding:clamp(8px,1.3vh,12px);border:1px solid #42546e;border-radius:10px;width:100%;font:inherit}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:clamp(6px,1.15vh,11px) 0;font-size:clamp(12px,1.5vh,15px)}.history{list-style:none;padding:0;margin:0;height:calc(100% - 27px);overflow:auto}.history li{display:flex;justify-content:space-between;gap:10px;padding:clamp(5px,1vh,10px) 0;border-bottom:1px solid #2b3a4d;font-size:12px}.history li:last-child{border:0}.footer{margin-top:clamp(6px,1vh,12px);color:#8497af;font-size:11px;text-align:center;flex:none}.kill{color:var(--gold);min-height:18px;font-size:13px;font-weight:700;margin-top:8px}@media(min-width:761px) and (max-height:690px){.stack{gap:7px;grid-template-rows:auto auto minmax(62px,1fr)}.panel{padding:12px}.heading h1{font-size:25px}.glyph{font-size:36px}.time{font-size:60px;margin:6px 0}.progress{margin:10px 0}.divider{margin:8px 0}.stat{padding:8px}.stat .val{font-size:21px}.title{margin-bottom:8px}.row{margin:5px 0}.actions{margin-top:11px}.footer{font-size:10px}}@media(max-width:760px){body{padding:12px;display:block}.app{height:auto;min-height:calc(100dvh - 24px)}.layout{grid-template-columns:1fr;flex:unset}.hunt{min-height:380px}.time{font-size:clamp(46px,12vw,80px)}.stack{display:flex;flex-direction:column}.stack .panel{overflow:visible}.history{max-height:170px}.panel{padding:19px}.tag{font-size:11px}.actions{flex-wrap:wrap}.footer{margin:12px 0}}
 
@@ -72,16 +72,19 @@
 /* current game: retain interaction */
 .skill-promote.ready{cursor:pointer}.skill-progress .pink{transition:width .15s}.skill-progress .blue{transition:width .15s}
 @media(min-width:761px) and (max-height:610px){.left-stack{grid-template-rows:minmax(0,1fr) 164px}.skill-left,.skill-right{padding:6px}.skill-right{gap:5px}.skill-icon{width:32px;height:32px}.skill-title{font-size:15px}.skill-panel{padding:6px!important}}
+
+/* v1.2 region popovers and retained skill visuals */
+.header-right{position:relative}.menu-trigger{font-size:16px!important;min-width:35px}.menu-pop{position:absolute;right:0;top:100%;z-index:30;display:flex;align-items:flex-start;gap:7px;margin-top:7px;filter:drop-shadow(0 10px 20px #0009)}.menu-pop[hidden],.menu-detail[hidden]{display:none!important}.menu-options,.menu-detail{background:#192638;border:1px solid #344358;border-radius:11px;padding:9px;display:flex;flex-direction:column;gap:7px}.menu-options{width:116px}.menu-detail{min-width:215px;max-width:min(330px,67vw);font-size:13px;color:#c8d8ea}.menu-pop button{padding:8px 7px;border-radius:7px;font-size:13px;text-align:center}.menu-pop button.travel-menu{background:#68482d;border-color:#be8754}.menu-pop button:disabled{opacity:.35}.menu-detail h3{text-align:center;margin:0 0 5px;font-size:14px;color:#f1f5fb}.menu-detail .item-line{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:13px;padding:2px 0}.menu-detail .item-line span{white-space:nowrap}.menu-detail .item-line b{white-space:nowrap;font-weight:600;color:#eaf2fc}.menu-detail .selection{background:#263549;border:1px solid #344358;color:#f1f5fb;width:100%;font-weight:600}.menu-detail .selection.chosen{background:#59442f;border-color:#c78a51}.menu-detail .minor{font-size:12px;color:#91a5bc;text-align:center}.menu-detail .section-title{color:#ffd198;font-size:13px;font-weight:700;margin-top:5px}.menu-detail .separator{height:1px;background:#344358;margin:4px 0}.menu-detail select{font-size:12px;padding:6px;min-width:0}.zone-loot{display:contents}.loot-strip .zone-loot span{display:inline-block}.log-line.crystal{color:#a9e887;font-weight:700}.skill-promote.ascend{background:#ba404e!important;border-color:#dd7281!important;color:white!important;position:relative;animation:auroraPulse 3s ease-in-out infinite;box-shadow:0 0 9px #b25cd355}.skill-promote.ascend:before{content:'';position:absolute;inset:-2px;border-radius:9px;pointer-events:none;border:1px solid #e6abec70;animation:auroraPulse 3s ease-in-out infinite}@keyframes auroraPulse{0%,100%{box-shadow:0 0 6px #b25cd355}50%{box-shadow:0 0 18px #c193e999,0 0 12px #a0d7dd66}}.skill-icon.silver{border-color:#7da5c3;background:radial-gradient(circle at 45% 32%,#405a70 0%,#27374a 55%,#172334 100%);animation:silverAura 3.5s ease-in-out infinite}@keyframes silverAura{50%{box-shadow:0 0 15px #a9cde477}}@media(max-width:760px){.menu-pop{right:0}.menu-detail{max-width:215px}}
 </style>
 </head>
 <body>
 <main class="app">
- <header class="heading"><div><div class="eyebrow">LIFE RPG · STUDY FARMING · v1.1 SKILL</div><div class="heading-main"><h1>시간의 정원 🌳</h1></div><div class="subtitle">모험에 집중하며 경험치와 골드를 획득하세요.</div></div><div class="header-right"><div class="loot-strip"><span class="character" id="character">이채쏠 <strong>Lv.1</strong></span><span>처치한 선우 수 <b id="bossCount">0</b></span><span>솔 에르다 조각 <b id="sol">0</b></span><span>선우의 목걸이 <b id="necklace">0</b></span><span>선우의 검조각 <b id="swordPiece">0</b></span><span>용형도 <b id="dragon">0</b></span></div><div class="status-actions"><button type="button" class="tag bgm-switch" id="bgmToggle" aria-pressed="true">♫ BGM On</button><span class="tag" id="badge">● 대기 중</span></div></div></header>
+ <header class="heading"><div><div class="eyebrow">LIFE RPG · STUDY FARMING · v1.2.1</div><div class="heading-main"><h1>시간의 정원 🌳</h1></div><div class="subtitle">모험에 집중하며 경험치와 골드를 획득하세요.</div></div><div class="header-right"><div class="loot-strip"><span class="character" id="character">이채쏠 <strong>Lv.1</strong></span><span id="bossPill">처치한 선우 수 <b id="bossCount">0</b></span><span>솔 에르다 조각 <b id="sol">0</b></span><span class="zone-loot" id="lootPills"></span></div><div class="status-actions"><button type="button" class="tag bgm-switch" id="bgmToggle" aria-pressed="true">♫ BGM On</button><span class="tag" id="badge">● 대기 중</span><button type="button" class="tag menu-trigger" id="menuTrigger" aria-label="메뉴 열기">☰</button></div><div class="menu-pop" id="menuPop" hidden><div class="menu-detail" id="menuDetail" hidden></div><div class="menu-options"><button type="button" class="travel-menu" data-menu="travel">지역 이동</button><button type="button" data-menu="achievement">사냥 업적</button><button type="button" data-menu="inventory">인벤토리</button></div></div></div></header>
  <div class="layout">
-  <div class="left-stack"><section class="panel hunt"><div class="glyph">⏳</div><div class="area">사냥터 · 높:흉노2지</div><div class="time" id="timer">00:00:00</div><div class="status" id="status">모험을 시작할 준비가 되었습니다.</div><div class="progress"><div id="bar"></div></div><div class="kill" id="kill">몬스터 출현 대기 중</div><div class="small" id="next">몬스터 처치 시 경험치 · 골드 획득</div><div class="actions"><button id="start" class="primary">▶ 사냥 시작</button><button id="pause" class="secondary" disabled>Ⅱ 일시정지</button><button id="finish" class="danger" disabled>■ 사냥 종료</button></div></section>
-<section class="panel skill-panel" aria-label="검술 기초 I 수련 패널"><div class="skill-left"><div class="skill-icon"><svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-label="금색 교차 검 아이콘"><defs><linearGradient id="bladeGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF0B9"/><stop offset=".45" stop-color="#E3BC69"/><stop offset="1" stop-color="#AD7733"/></linearGradient></defs><g stroke-linecap="round" stroke-linejoin="round"><path d="M15 51L46 13L55 8L51 18L20 54Z" fill="url(#bladeGold)" stroke="#F4D890" stroke-width="1.5"/><path d="M49 51L18 13L9 8L13 18L44 54Z" fill="url(#bladeGold)" stroke="#F4D890" stroke-width="1.5"/><path d="M10 42L23 54M54 42L41 54" stroke="#B38142" stroke-width="5"/><path d="M14 49L8 56M50 49L56 56" stroke="#E5C477" stroke-width="4"/><circle cx="16" cy="46" r="2" fill="#FFF0BE"/><circle cx="48" cy="46" r="2" fill="#FFF0BE"/></g></svg></div><div class="skill-title">검술 기초 I</div><div class="skill-rank" id="skillRank">Rank 8</div><button type="button" class="skill-promote" id="skillPromote" disabled>수련 포인트 부족</button></div>
-<div class="skill-right"><div class="skill-row"><strong>수련 포인트</strong><strong id="skillPts">0 / 4,300</strong></div><div class="skill-progress"><div class="blue" id="skillBlue"></div><div class="pink" id="skillPink"></div></div><div class="skill-row"><span>흉노족 처치</span><span id="skillNormal">0 / 3,700</span></div><div class="skill-meter"><div id="skillNormalBar"></div></div><div class="skill-row"><span>흉폭한선우 처치</span><span id="skillBoss">0 / 13</span></div><div class="skill-meter"><div id="skillBossBar"></div></div></div></section></div>
-  <aside class="stack"><section class="panel"><h2 class="title">이번 사냥</h2><div class="stats"><div class="stat"><div class="small">획득 경험치</div><div class="val green" id="sessionXp">0</div><div class="small">EXP</div></div><div class="stat"><div class="small">획득 골드</div><div class="val gold" id="sessionGold">0</div><div class="small">GOLD</div></div></div><div class="divider"></div><h2 class="title">보유 재화</h2><div class="row"><span class="muted">누적 경험치</span><strong class="green" id="totalXp">0 EXP</strong></div><div class="row"><span class="muted">누적 골드</span><strong class="gold" id="totalGold">0 G</strong></div><div class="row"><span class="muted">총 사냥 시간</span><strong id="totalTime">0분</strong></div></section><section class="panel farm-panel"><div class="panel-top"><h2 class="title">사냥 로그</h2><span class="small">모험 중</span></div><div class="farm-info"><span>흉노평민, 흉노전사, 흉노무사 / 흉폭한선우</span><span>초당 1~2마리</span></div><div class="hunt-log" id="huntLog" role="log" aria-live="off"><div class="log-empty">사냥을 시작하면 처치 로그가 표시됩니다.</div></div></section><section class="panel"><h2 class="title">최근 사냥 기록</h2><ul class="history" id="history"><li class="muted">기록이 없습니다.</li></ul></section></aside>
+  <div class="left-stack"><section class="panel hunt"><div class="glyph">⏳</div><div class="area">사냥터 · <span id="zoneName">높:흉노2지</span></div><div class="time" id="timer">00:00:00</div><div class="status" id="status">모험을 시작할 준비가 되었습니다.</div><div class="progress"><div id="bar"></div></div><div class="kill" id="kill">몬스터 출현 대기 중</div><div class="small" id="next">몬스터 처치 시 경험치 · 골드 획득</div><div class="actions"><button id="start" class="primary">▶ 사냥 시작</button><button id="pause" class="secondary" disabled>Ⅱ 일시정지</button><button id="finish" class="danger" disabled>■ 사냥 종료</button></div></section>
+<section class="panel skill-panel" aria-label="검술 기초 I 수련 패널"><div class="skill-left"><div class="skill-icon"><svg width="48" height="48" viewBox="0 0 64 64" fill="none" aria-label="금색 교차 검 아이콘"><defs><linearGradient id="bladeGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFF0B9"/><stop offset=".45" stop-color="#E3BC69"/><stop offset="1" stop-color="#AD7733"/></linearGradient></defs><g stroke-linecap="round" stroke-linejoin="round"><path d="M15 51L46 13L55 8L51 18L20 54Z" fill="url(#bladeGold)" stroke="#F4D890" stroke-width="1.5"/><path d="M49 51L18 13L9 8L13 18L44 54Z" fill="url(#bladeGold)" stroke="#F4D890" stroke-width="1.5"/><path d="M10 42L23 54M54 42L41 54" stroke="#B38142" stroke-width="5"/><path d="M14 49L8 56M50 49L56 56" stroke="#E5C477" stroke-width="4"/><circle cx="16" cy="46" r="2" fill="#FFF0BE"/><circle cx="48" cy="46" r="2" fill="#FFF0BE"/></g></svg></div><div class="skill-title" id="skillTitle">검술 기초 I</div><div class="skill-rank" id="skillRank">Rank 8</div><button type="button" class="skill-promote" id="skillPromote" disabled>수련 포인트 부족</button></div>
+<div class="skill-right"><div class="skill-row"><strong>수련 포인트</strong><strong id="skillPts">0 / 4,300</strong></div><div class="skill-progress"><div class="blue" id="skillBlue"></div><div class="pink" id="skillPink"></div></div><div class="skill-row"><span id="normalTrainLabel">흉노족 처치</span><span id="skillNormal">0 / 3,700</span></div><div class="skill-meter"><div id="skillNormalBar"></div></div><div class="skill-row"><span id="bossTrainLabel">흉폭한선우 처치</span><span id="skillBoss">0 / 13</span></div><div class="skill-meter"><div id="skillBossBar"></div></div></div></section></div>
+  <aside class="stack"><section class="panel"><h2 class="title">이번 사냥</h2><div class="stats"><div class="stat"><div class="small">획득 경험치</div><div class="val green" id="sessionXp">0</div><div class="small">EXP</div></div><div class="stat"><div class="small">획득 골드</div><div class="val gold" id="sessionGold">0</div><div class="small">GOLD</div></div></div><div class="divider"></div><h2 class="title">보유 재화</h2><div class="row"><span class="muted">누적 경험치</span><strong class="green" id="totalXp">0 EXP</strong></div><div class="row"><span class="muted">누적 골드</span><strong class="gold" id="totalGold">0 G</strong></div><div class="row"><span class="muted">총 사냥 시간</span><strong id="totalTime">0분</strong></div></section><section class="panel farm-panel"><div class="panel-top"><h2 class="title">사냥 로그</h2><span class="small">모험 중</span></div><div class="farm-info"><span id="mobList">흉노평민, 흉노전사, 흉노무사 / 흉폭한선우</span><span id="killRate">초당 1~2마리</span></div><div class="hunt-log" id="huntLog" role="log" aria-live="off"><div class="log-empty">사냥을 시작하면 처치 로그가 표시됩니다.</div></div></section><section class="panel"><h2 class="title">최근 사냥 기록</h2><ul class="history" id="history"><li class="muted">기록이 없습니다.</li></ul></section></aside>
  </div><div class="footer">기록은 기기별로 저장됩니다. 다른 기기로 옮길 때 백업·복원 기능을 이용하세요. <div class="pwa-tools"><button type="button" id="backupData">↓ 기록 백업</button><button type="button" id="restoreData">↑ 기록 복원</button><input id="restoreFile" type="file" accept=".json,application/json" hidden><button type="button" id="installApp" hidden>＋ 앱 설치</button></div></div>
 </main>
 <script>
@@ -89,10 +92,14 @@
 const KEY='life-rpg-hungno-v5-fresh'; // Fresh game: do not import prior versions
 const $=id=>document.getElementById(id),fmt=n=>Math.floor(n).toLocaleString('ko-KR');
 const clock=s=>{s=Math.floor(s);return [Math.floor(s/3600),Math.floor(s%3600/60),s%60].map(n=>String(n).padStart(2,'0')).join(':')};
-const defaultInventory=()=>({bossCount:0,sol:0,necklace:0,swordPiece:0,dragon:0});
-const base={totalSeconds:0,totalXp:0,totalGold:0,history:[],inventory:defaultInventory(),session:null,skill:null};
+const defaultInventory=()=>({bossCount:0,sol:0,necklace:0,swordPiece:0,dragon:0,lycanCount:0,claw:0,blueprint:0,heart:0,crystal:0});
+const zoneItems={hungno:['sol','necklace','swordPiece','dragon'],snow:['sol','crystal','claw','blueprint','heart']};
+const itemLabels={sol:'솔 에르다 조각',necklace:'선우의 목걸이',swordPiece:'선우의 검조각',dragon:'용형도',claw:'라이칸의 발톱',blueprint:'라이칸의 계획서',heart:'얼어붙은 늑대의 심장',crystal:'사냥의 결정'};
+const ZONES={hungno:{name:'높:흉노2지',bossName:'선우',bossKey:'bossCount',mobs:[{name:'흉노평민',xp:230000,weight:.3333333333},{name:'흉노전사',xp:253000,weight:.3333333333},{name:'흉노무사',xp:276000,weight:.3333333334}],bossXp:2300000,gold:44},snow:{name:'높:얼어붙은평원',bossName:'라이칸스코프',bossKey:'lycanCount',mobs:[{name:'예티',xp:600000,weight:.4},{name:'예티와페페',xp:840000,weight:.4},{name:'화이트팽',xp:420000,weight:.2}],bossXp:12000000,gold:53}};
+const blankAchievement=()=>({seconds:0,xp:0,gold:0,boss:0,items:{sol:0,necklace:0,swordPiece:0,dragon:0,crystal:0,claw:0,blueprint:0,heart:0}});
+const base={totalSeconds:0,totalXp:0,totalGold:0,history:[],inventory:defaultInventory(),session:null,skill:null,activeZone:'hungno',achievements:{hungno:blankAchievement(),snow:blankAchievement()}};
 // Save-data schema version is independent from the PWA/game version.
-const SAVE_SCHEMA=3, SAFETY_KEY=KEY+'-previous-good';
+const SAVE_SCHEMA=4, SAFETY_KEY=KEY+'-previous-good';
 const safeInt=(x,label)=>{if(!Number.isSafeInteger(x)||x<0)throw Error(label+' 값이 올바르지 않습니다.');return x};
 function migrateSave(input,version=1){
  if(!input||typeof input!=='object'||Array.isArray(input))throw Error('세이브 데이터 형식이 올바르지 않습니다.');
@@ -126,8 +133,14 @@ function migrateSave(input,version=1){
  const ranks=['F','E','D','C','B','A','9','8','7','6','5','4','3','2','1'];
  // Old saves have no reliable chronological monster kills. Initialize the acknowledged historical milestone once.
  const sk=input.skill&&typeof input.skill==='object'?input.skill:null;
- const skill=sk?{rank:Math.min(14,safeInt(sk.rank??7,'스킬 랭크')),normal:safeInt(sk.normal??0,'흉노족 수련'),boss:safeInt(sk.boss??0,'선우 수련')}:{rank:7,normal:0,boss:0};
- return {...base,skill,totalSeconds:safeInt(input.totalSeconds??0,'총 시간'),totalXp:safeInt(input.totalXp??0,'총 경험치'),totalGold:safeInt(input.totalGold??0,'총 골드'),history:cleanedHistory,inventory,session};
+ const skill=sk?{rank:Math.min(14,safeInt(sk.rank??7,'스킬 랭크')),normal:safeInt(sk.normal??0,'흉노족 수련'),boss:safeInt(sk.boss??0,'선우 수련'),tier:sk.tier==='intermediate'?'intermediate':'basic',completedBasic:!!sk.completedBasic}:{rank:7,normal:0,boss:0,tier:'basic',completedBasic:false};
+ const oldSchema=version<4;
+ const achievements={};for(const id of Object.keys(ZONES)){
+  const a=input.achievements?.[id]||{};const items={};for(const k of Object.keys(blankAchievement().items))items[k]=safeInt(a.items?.[k]??(oldSchema&&id==='hungno'?inventory[k]||0:0),'누적 아이템');
+  achievements[id]={seconds:safeInt(a.seconds??(oldSchema&&id==='hungno'?input.totalSeconds||0:0),'업적 시간'),xp:safeInt(a.xp??(oldSchema&&id==='hungno'?input.totalXp||0:0),'업적 경험치'),gold:safeInt(a.gold??(oldSchema&&id==='hungno'?input.totalGold||0:0),'업적 골드'),boss:safeInt(a.boss??(oldSchema&&id==='hungno'?inventory.bossCount:0),'업적 보스'),items};
+ }
+ const activeZone=(input.activeZone==='snow'?'snow':'hungno');if(session){session.zone=(s=>s==='snow'?'snow':'hungno')(session.zone);session.killIntervalMs=session.killIntervalMs===800?800:1000;session.twoKillChance=Number.isFinite(session.twoKillChance)?session.twoKillChance:.5;}
+ return {...base,achievements,activeZone,skill,totalSeconds:safeInt(input.totalSeconds??0,'총 시간'),totalXp:safeInt(input.totalXp??0,'총 경험치'),totalGold:safeInt(input.totalGold??0,'총 골드'),history:cleanedHistory,inventory,session};
 }
 let state;
 try{const stored=localStorage.getItem(KEY);state=stored?migrateSave(JSON.parse(stored),JSON.parse(stored).saveSchema||1):migrateSave(base)}
@@ -144,11 +157,20 @@ let audio=null,lastSoundAt=0;
 const BGM_KEY='time-garden-bgm-enabled';
 let bgmEnabled=true;
 try{bgmEnabled=localStorage.getItem(BGM_KEY)!=='false'}catch{}
-const bgm=new Audio('./bgm.mp3');
+const BGM_TRACKS={hungno:'./bgm.mp3',snow:'./bgm-snow.mp3'};
+const bgm=new Audio(BGM_TRACKS.hungno);
+let currentBgmZone='hungno';
+function syncBgmTrack(){
+ const zone=state.session?.zone||state.activeZone;
+ if(currentBgmZone===zone)return;
+ bgm.pause();bgm.currentTime=0;
+ currentBgmZone=zone;bgm.src=BGM_TRACKS[zone];bgm.load();
+}
 bgm.loop=true;
 bgm.preload='auto';
 bgm.volume=.20;
 function syncBgm(allowPlay=false){
+ syncBgmTrack();
  const toggle=$('bgmToggle');
  toggle.textContent='♫ BGM '+(bgmEnabled?'On':'Off');
  toggle.setAttribute('aria-pressed',String(bgmEnabled));
@@ -175,72 +197,99 @@ function now(){return Date.now()}
 function secs(){let s=state.session;if(!s)return 0;return Math.max(0,(s.elapsedMs+(s.runningSince?Math.max(0,now()-s.runningSince):0))/1000)}
 function seed(){let a=(Date.now()^Math.floor(Math.random()*4294967295))>>>0;return a||123456789}
 function rand(s){let x=s.rng>>>0;x^=x<<13;x^=x>>>17;x^=x<<5;s.rng=x>>>0;return s.rng/4294967296}
-function createSession(){return {subject:'모험 중',elapsedMs:0,runningSince:now(),processedSeconds:0,earnedXp:0,earnedGold:0,kills:0,lastKill:0,rng:seed(),twoKillChance:.42+Math.random()*.16,monsters:{'흉노평민':0,'흉노전사':0,'흉노무사':0,'선우':0},log:[]}}
+function createSession(){const advanced=state.skill.tier==='intermediate';return {zone:state.activeZone,killIntervalMs:advanced?800:1000,subject:'모험 중',elapsedMs:0,runningSince:now(),processedSeconds:0,earnedXp:0,earnedGold:0,kills:0,lastKill:0,rng:seed(),twoKillChance:advanced?.7:.5,monsters:{'흉노평민':0,'흉노전사':0,'흉노무사':0,'선우':0},log:[]}}
 // Fixed per-monster XP ratio 100:110:120; boss = 1000%.
-const MOBS=[{name:'흉노평민',xp:230000},{name:'흉노전사',xp:253000},{name:'흉노무사',xp:276000}];
-const BOSS_XP=2300000, GOLD_PER_KILL=44;
+
 function addLog(s,type,text){let l={type,text};s.log.push(l);if(s.log.length>65)s.log.shift();combatLines.push(l);if(combatLines.length>65)combatLines.shift()}
 const SKILL_RANKS=['F','E','D','C','B','A','9','8','7','6','5','4','3','2','1'];
 const SKILL_NORMAL_CAP=[1900,2000,2200,2300,2500,2600,3200,3700,4400,5200,6200,7300,8600,10100];
 const SKILL_BOSS_CAP=[6,7,8,8,9,9,11,13,16,19,22,27,32,38];
 const SKILL_REQUIRE=[2000,2200,2400,2600,2800,3000,3600,4300,5100,6100,7300,8700,10400,12400];
-function skillPoints(){const k=state.skill,r=k.rank;return r>=14?0:Math.min(k.normal,SKILL_NORMAL_CAP[r])+100*Math.min(k.boss,SKILL_BOSS_CAP[r])}
-function renderSkill(){const k=state.skill,r=k.rank,done=r>=14,need=done?0:SKILL_REQUIRE[r],pts=skillPoints(),max=done?1:need;
- $('skillRank').textContent='Rank '+SKILL_RANKS[r]; $('skillPts').textContent=done?'마스터 달성':fmt(pts)+' / '+fmt(need);
- $('skillBlue').style.width=(done?100:Math.min(100,pts/max*100))+'%';
- $('skillPink').style.width=(done?100:Math.min(100,Math.max(0,(pts-need)/need*100)))+'%';
- $('skillNormal').textContent=done?'완료':fmt(Math.min(k.normal,SKILL_NORMAL_CAP[r]))+' / '+fmt(SKILL_NORMAL_CAP[r]);
- $('skillBoss').textContent=done?'완료':fmt(Math.min(k.boss,SKILL_BOSS_CAP[r]))+' / '+fmt(SKILL_BOSS_CAP[r]);
- $('skillNormalBar').style.width=(done?100:Math.min(100,k.normal/SKILL_NORMAL_CAP[r]*100))+'%';
- $('skillBossBar').style.width=(done?100:Math.min(100,k.boss/SKILL_BOSS_CAP[r]*100))+'%';
- const ready=!done&&pts>=need,btn=$('skillPromote');btn.disabled=!ready;btn.classList.toggle('ready',ready);btn.textContent=done?'최고 랭크 달성':ready?'승급':'수련 포인트 부족';
+function skillNeed(rank,tier){let x=tier==='intermediate'?2600:2000;for(let i=1;i<=rank;i++)x=Math.floor(x*(i<=5?1.1:1.2)/100)*100;return x}
+function skillCaps(rank,tier){if(tier!=='intermediate')return [SKILL_NORMAL_CAP[rank],SKILL_BOSS_CAP[rank]];const ratio=skillNeed(rank,'intermediate')/SKILL_REQUIRE[rank];return [Math.floor(SKILL_NORMAL_CAP[rank]*ratio),Math.floor(SKILL_BOSS_CAP[rank]*ratio)]}
+function skillPoints(){const k=state.skill,r=k.rank;if(r>=14)return 0;const [n,b]=skillCaps(r,k.tier);return Math.min(k.normal,n)+100*Math.min(k.boss,b)}
+const GOLD_ICON_SVG=$('skillTitle').parentElement.querySelector('svg').outerHTML;
+function renderSkill(){const k=state.skill,r=k.rank,done=r>=14,need=done?0:skillNeed(r,k.tier),pts=skillPoints(),max=done?1:need,[n,b]=done?[1,1]:skillCaps(r,k.tier),advanced=k.tier==='intermediate';
+ $('skillTitle').textContent=advanced?'중급 검술':'검술 기초 I';$('skillRank').textContent='Rank '+SKILL_RANKS[r];$('skillPts').textContent=done?'최고 랭크 달성':fmt(pts)+' / '+fmt(need);
+ $('skillBlue').style.width=(done?100:Math.min(100,pts/max*100))+'%';$('skillPink').style.width=(done?100:Math.min(100,Math.max(0,(pts-need)/need*100)))+'%';
+ $('skillNormal').textContent=done?'완료':fmt(Math.min(k.normal,n))+' / '+fmt(n);$('skillBoss').textContent=done?'완료':fmt(Math.min(k.boss,b))+' / '+fmt(b);
+ $('skillNormalBar').style.width=(done?100:Math.min(100,k.normal/n*100))+'%';$('skillBossBar').style.width=(done?100:Math.min(100,k.boss/b*100))+'%';
+ $('normalTrainLabel').textContent=advanced?'상위 사냥터 몬스터 처치':'흉노족 처치';$('bossTrainLabel').textContent=advanced?'라이칸스코프 처치':'흉폭한선우 처치';
+ const icon=$('skillTitle').parentElement.querySelector('.skill-icon');icon.classList.toggle('silver',advanced);if(advanced){icon.innerHTML=GOLD_ICON_SVG.replaceAll('bladeGold','bladeSilver').replaceAll('#FFF0B9','#F2FAFF').replaceAll('#E3BC69','#A9CDE4').replaceAll('#AD7733','#648CA6').replaceAll('#F4D890','#D4E9F8').replaceAll('#B38142','#7195AE').replaceAll('#E5C477','#C5DDEC').replaceAll('#FFF0BE','#EFF9FF')}else if(icon.classList.contains('was-silver'))icon.innerHTML=GOLD_ICON_SVG;icon.classList.toggle('was-silver',advanced);
+ const canAscend=!advanced&&done&&levelFor(state.totalXp+(state.session?.earnedXp||0))>=60;
+ const ready=!done&&pts>=need,btn=$('skillPromote');btn.disabled=!(ready||canAscend);btn.classList.toggle('ready',ready);btn.classList.toggle('ascend',canAscend);btn.textContent=canAscend?'승격':done?(advanced?'최고 랭크 달성':'Lv.60 달성 시 승격'):ready?'승급':'수련 포인트 부족';
 }
-$('skillPromote').onclick=()=>{settle();const k=state.skill;if(k.rank>=14||skillPoints()<SKILL_REQUIRE[k.rank])return;
- if(!confirm('검술 기초 I을 Rank '+SKILL_RANKS[k.rank+1]+'(으)로 승급하시겠습니까?'))return;
+$('skillPromote').onclick=()=>{settle();const k=state.skill;
+ if(k.rank>=14){if(k.tier==='basic'&&levelFor(state.totalXp+(state.session?.earnedXp||0))>=60&&confirm('검술 기초 I Rank 1 기록을 보존하고 중급 검술 Rank F로 승격하시겠습니까?')){k.completedBasic=true;k.tier='intermediate';k.rank=0;k.normal=0;k.boss=0;save();render()}return}
+ if(skillPoints()<skillNeed(k.rank,k.tier))return;
+ if(!confirm((k.tier==='basic'?'검술 기초 I':'중급 검술')+' Rank '+SKILL_RANKS[k.rank+1]+' 승급하시겠습니까?'))return;
  k.rank++;k.normal=0;k.boss=0;save();render()};
-function kill(s){let type,name,xp;
-if(rand(s)<.001){type='boss';name='선우';xp=BOSS_XP;state.inventory.bossCount++;s.monsters['선우']++;s.soundBoss=true;
-}else{let mob=MOBS[Math.floor(rand(s)*3)];name=mob.name;xp=mob.xp;type='normal';s.monsters[name]++}
-if(state.skill.rank<14){if(type==='boss')state.skill.boss++;else state.skill.normal++}s.kills++;s.earnedXp+=xp;s.earnedGold+=GOLD_PER_KILL;
-addLog(s,type,type==='boss'?`선우를 처치하였습니다. 경험치가 ${fmt(xp)} 올랐습니다.`:`경험치가 ${fmt(xp)} 올랐습니다.`);
-if(type==='boss'){
- state.inventory.sol+=(rand(s)<.8?1:2);s.soundSol=true;addLog(s,'sol','솔 에르다 조각을 획득하였습니다.');
- if(rand(s)<.10){let item=rand(s)<.5?'necklace':'swordPiece';state.inventory[item]++;addLog(s,'rare',item==='necklace'?'선우의 목걸이를 획득하였습니다.':'선우의 검조각을 획득하였습니다.')}
- if(rand(s)<.01){state.inventory.dragon++;addLog(s,'dragon','용형도를 획득하였습니다.')}
-}else if(rand(s)<.0008){state.inventory.sol++;s.soundSol=true;addLog(s,'sol','솔 에르다 조각을 획득하였습니다.')}
+function addItem(s,id,count,type){state.inventory[id]+=count;state.achievements[s.zone].items[id]+=count;addLog(s,type||id,(id==='sol'?'솔 에르다 조각':id==='crystal'?'사냥의 결정':itemLabels[id])+'을(를) '+fmt(count)+'개 획득하였습니다.');if(id==='sol')s.soundSol=true}
+function kill(s){const zone=ZONES[s.zone],a=state.achievements[s.zone];let type,name,xp;const isBoss=rand(s)<.001;
+ if(isBoss){type='boss';name=zone.bossName;xp=zone.bossXp;state.inventory[zone.bossKey]++;a.boss++;s.monsters[name]=(s.monsters[name]||0)+1;s.soundBoss=true}
+ else{type='normal';let q=rand(s),mob=zone.mobs[zone.mobs.length-1];for(const m of zone.mobs){q-=m.weight;if(q<=0){mob=m;break}}name=mob.name;xp=mob.xp;s.monsters[name]=(s.monsters[name]||0)+1}
+ if(state.skill.rank<14&&((state.skill.tier==='basic'&&s.zone==='hungno')||(state.skill.tier==='intermediate'&&s.zone==='snow'))){if(isBoss)state.skill.boss++;else state.skill.normal++}
+ s.kills++;s.earnedXp+=xp;s.earnedGold+=zone.gold;
+ addLog(s,type,isBoss?name+'를 처치하였습니다. 경험치가 '+fmt(xp)+' 올랐습니다.':'경험치가 '+fmt(xp)+' 올랐습니다.');
+ if(isBoss){addItem(s,'sol',s.zone==='snow'?2:(rand(s)<.8?1:2),'sol');if(rand(s)<.10){const item=rand(s)<.5?(s.zone==='snow'?'claw':'necklace'):(s.zone==='snow'?'blueprint':'swordPiece');state.inventory[item]++;a.items[item]++;addLog(s,'rare',itemLabels[item]+'을(를) 획득하였습니다.')}
+ if(rand(s)<.01){const item=s.zone==='snow'?'heart':'dragon';state.inventory[item]++;a.items[item]++;addLog(s,'dragon',itemLabels[item]+'을(를) 획득하였습니다.')}
+ }else if(rand(s)<(s.zone==='snow'?.00088:.0008)){addItem(s,'sol',1,'sol')}
+ if(s.zone==='snow'&&rand(s)<.10){state.inventory.crystal++;a.items.crystal++;s.crystalsThisBatch=(s.crystalsThisBatch||0)+1}
 }
-function settle(){let s=state.session;if(!s)return;let full=Math.floor(secs());if(full<=s.processedSeconds)return;let prevLevel=levelFor(state.totalXp+s.earnedXp);s.soundBoss=false;s.soundSol=false;
-if(!s.rng){s.rng=seed();s.twoKillChance=.5;s.log=[];s.monsters={'흉노평민':0,'흉노전사':0,'흉노무사':0,'선우':0}}
-for(let i=s.processedSeconds;i<full;i++){let kills=rand(s)<s.twoKillChance?2:1;s.lastKill=kills;for(let j=0;j<kills;j++)kill(s)}
-s.processedSeconds=full;
-const newLevel=levelFor(state.totalXp+s.earnedXp);
-if(newLevel>prevLevel){sound('level');const el=$('character');el.classList.remove('level-flash');void el.offsetWidth;el.classList.add('level-flash')}
-else if(s.soundBoss)sound('boss');else if(s.soundSol)sound('sol');
-save()}
+function settle(){let s=state.session;if(!s)return;const interval=s.killIntervalMs||1000;const full=Math.floor(secs()*1000/interval);if(full<=s.processedSeconds)return;let prevLevel=levelFor(state.totalXp+s.earnedXp);s.soundBoss=false;s.soundSol=false;s.crystalsThisBatch=0;
+ if(!s.rng){s.rng=seed();s.twoKillChance=.5;s.log=[];s.monsters={}}
+ for(let i=s.processedSeconds;i<full;i++){let kills=rand(s)<s.twoKillChance?2:1;s.lastKill=kills;for(let j=0;j<kills;j++)kill(s)}
+ s.processedSeconds=full;if(s.crystalsThisBatch)addLog(s,'crystal','사냥의 결정을 '+fmt(s.crystalsThisBatch)+'개 획득하였습니다.');
+ const newLevel=levelFor(state.totalXp+s.earnedXp);
+ if(newLevel>prevLevel){sound('level');const el=$('character');el.classList.remove('level-flash');void el.offsetWidth;el.classList.add('level-flash')}
+ else if(s.soundBoss)sound('boss');else if(s.soundSol)sound('sol');
+ save()}
 function showLog(s){const el=$('huntLog');if(!s){el.replaceChildren();const d=document.createElement('div');d.className='log-empty';d.textContent='사냥을 시작하면 처치 로그가 표시됩니다.';el.append(d);return}
 const src=s.log||[]; // Bottom shows newest. Render only lines that fit; older ones vanish upward.
 const max=Math.max(3,Math.floor((el.clientHeight-14)/16));const visible=src.slice(-max);
 el.replaceChildren(...visible.map(x=>{let d=document.createElement('div');d.className='log-line '+x.type;d.textContent=x.text;return d}));}
+let menuOpen=false,menuView='',achievementView='hungno';
+function makeLine(label,val){const row=document.createElement('div');row.className='item-line';const s=document.createElement('span'),b=document.createElement('b');s.textContent=label;b.textContent=val;row.append(s,b);return row}
+function popTitle(el,title){const h=document.createElement('h3');h.textContent=title;el.append(h)}
+function popButton(label,fn,chosen=false){const b=document.createElement('button');b.className='selection'+(chosen?' chosen':'');b.textContent=label;b.onclick=fn;return b}
+function menuRender(){const pop=$('menuPop'),detail=$('menuDetail');pop.hidden=!menuOpen;detail.hidden=!menuView;if(!menuOpen)return;
+ for(const btn of pop.querySelectorAll('[data-menu]')){btn.disabled=btn.dataset.menu==='travel'&&!!state.session;btn.style.outline=btn.dataset.menu===menuView?'1px solid #849fbb':'none'}
+ if(!menuView)return;detail.replaceChildren();popTitle(detail,menuView==='travel'?'지역 이동':menuView==='achievement'?'사냥 업적':'인벤토리');
+ if(menuView==='travel'){
+  for(const id of Object.keys(ZONES)){const locked=id==='snow'&&levelFor(state.totalXp+(state.session?.earnedXp||0))<60;const b=popButton(ZONES[id].name+(id===state.activeZone?' ✓':locked?' · Lv.60 필요':''),()=>{if(state.session||locked)return;state.activeZone=id;save();render();menuRender()},id===state.activeZone);b.disabled=locked;detail.append(b)}
+  const note=document.createElement('div');note.className='minor';note.textContent='사냥 종료 후 이동 가능';detail.append(note)
+ }else if(menuView==='achievement'){
+  const sel=document.createElement('select');for(const id of Object.keys(ZONES)){const o=document.createElement('option');o.value=id;o.textContent=ZONES[id].name;sel.append(o)}sel.value=achievementView;sel.onchange=()=>{achievementView=sel.value;menuRender()};detail.append(sel);
+  const a=state.achievements[achievementView],s=state.session?.zone===achievementView?state.session:null;
+  detail.append(makeLine('누적 사냥 시간',fmt(Math.floor((a.seconds+(s?secs():0))/60))+'분'),makeLine('누적 경험치',fmt(a.xp+(s?s.earnedXp:0))+' EXP'),makeLine('누적 골드',fmt(a.gold+(s?s.earnedGold:0))+' G'),makeLine(ZONES[achievementView].bossName+' 처치',fmt(a.boss)+'마리'));
+  const sep=document.createElement('div');sep.className='separator';detail.append(sep);const sub=document.createElement('div');sub.className='section-title';sub.textContent='누적 획득 아이템';detail.append(sub);for(const id of zoneItems[achievementView])detail.append(makeLine(itemLabels[id],fmt(a.items[id])+'개'));
+ }else{
+  detail.append(makeLine('보유 골드',fmt(state.totalGold+(state.session?.earnedGold||0))+' G'));const sep=document.createElement('div');sep.className='separator';detail.append(sep);
+  for(const id of Object.keys(itemLabels))detail.append(makeLine(itemLabels[id],fmt(state.inventory[id])+'개'));
+ }}
+$('menuTrigger').onclick=e=>{e.stopPropagation();menuOpen=!menuOpen;if(!menuOpen)menuView='';menuRender()};
+for(const btn of $('menuPop').querySelectorAll('[data-menu]'))btn.onclick=e=>{e.stopPropagation();if(btn.disabled)return;menuView=menuView===btn.dataset.menu?'':btn.dataset.menu;menuRender()};
+document.addEventListener('click',e=>{if(menuOpen&&!e.target.closest('.header-right')){menuOpen=false;menuView='';menuRender()}});
 function render(){settle();const s=state.session,t=secs(),active=!!(s&&s.runningSince),paused=!!(s&&!s.runningSince);
 $('character').innerHTML='이채쏠 <strong>Lv.'+levelFor(state.totalXp+(s?s.earnedXp:0))+'</strong>';$('timer').textContent=clock(t);$('sessionXp').textContent=fmt(s?s.earnedXp:0);$('sessionGold').textContent=fmt(s?s.earnedGold:0);
 $('totalXp').textContent=fmt(state.totalXp)+' EXP';$('totalGold').textContent=fmt(state.totalGold)+' G';$('totalTime').textContent=fmt(state.totalSeconds/60)+'분';
-for(const id of Object.keys(state.inventory))$(id).textContent=fmt(state.inventory[id]);
+$('bossCount').textContent=fmt(state.inventory[ZONES[state.activeZone].bossKey]);$('bossPill').firstChild.textContent=(state.activeZone==='hungno'?'처치한 선우 수 ':'처치한 라이칸 수 ');$('sol').textContent=fmt(state.inventory.sol);const loot=$('lootPills');loot.replaceChildren();for(const id of zoneItems[state.activeZone].filter(x=>x!=='sol')){const span=document.createElement('span');span.textContent=itemLabels[id]+' ';const b=document.createElement('b');b.textContent=fmt(state.inventory[id]);span.append(b);loot.append(span)}
 $('badge').textContent=active?'● 사냥 중':paused?'Ⅱ 일시정지':'● 대기 중';
-$('status').textContent=active?'모험 중 · 흉노를 처치하고 있습니다.':paused?'일시정지 중 · 보상 획득이 중단되었습니다.':'모험을 시작할 준비가 되었습니다.';
+$('zoneName').textContent=ZONES[state.activeZone].name;$('status').textContent=active?'모험 중 · 몬스터를 처치하고 있습니다.':paused?'일시정지 중 · 보상 획득이 중단되었습니다.':'모험을 시작할 준비가 되었습니다.';
 $('start').textContent=paused?'▶ 사냥 재개':'▶ 사냥 시작';$('start').disabled=active;$('pause').disabled=!active;$('finish').disabled=!s;
 $('bar').style.width=((t%1)*100)+'%';$('kill').textContent=s?(s.lastKill?`⚔ 몬스터 ${fmt(s.kills)}마리 처치 · 최근 ${s.lastKill}마리 처치`:'몬스터 출현 대기 중'):'몬스터 출현 대기 중';
-$('next').textContent=active?'1초마다 몬스터 1~2마리 처치 · 보상 즉시 획득':paused?'사냥을 재개하면 처치가 이어집니다.':'시간당 EXP 약 12억~15억 · GOLD 약 22만~25만';
+$('next').textContent=active?(state.skill.tier==='intermediate'?'0.8초마다 몬스터 1~2마리 처치':'1초마다 몬스터 1~2마리 처치'):paused?'사냥을 재개하면 처치가 이어집니다.':'사냥을 시작하면 경험치·골드를 획득합니다.';const z=ZONES[state.activeZone];$('mobList').textContent=z.mobs.map(m=>m.name).join(', ')+' / '+z.bossName;$('killRate').textContent=state.skill.tier==='intermediate'?'0.8초당 1~2마리':'초당 1~2마리';
 showLog(s);renderSkill();
 $('history').replaceChildren();if(!state.history.length){let li=document.createElement('li');li.textContent='기록이 없습니다.';$('history').append(li)}else state.history.slice(0,5).forEach(h=>{let li=document.createElement('li'),a=document.createElement('span'),b=document.createElement('span');a.textContent=`${h.date} · ${h.subject||'모험 중'} · ${clock(h.seconds)}`;b.textContent=`+${fmt(h.xp)} XP / +${fmt(h.gold)} G`;b.className='green';li.append(a,b);$('history').append(li)})}
-$('start').onclick=()=>{unlockAudio();if(state.session){state.session.runningSince=now()}else{state.session=createSession()}save();syncBgm(true);render()};
-$('pause').onclick=()=>{let s=state.session;if(!s||!s.runningSince)return;settle();s.elapsedMs+=Math.max(0,now()-s.runningSince);s.runningSince=null;save();render()};
-$('finish').onclick=()=>{let s=state.session;if(!s)return;settle();let elapsed=secs();if(!confirm(`${clock(elapsed)} 사냥을 종료하고 ${fmt(s.earnedXp)} EXP / ${fmt(s.earnedGold)} G를 정산할까요?`))return;settle();s=state.session;state.totalSeconds+=Math.floor(secs());state.totalXp+=s.earnedXp;state.totalGold+=s.earnedGold;state.history.unshift({date:new Date().toLocaleDateString('ko-KR'),subject:'모험 중',seconds:Math.floor(secs()),xp:s.earnedXp,gold:s.earnedGold});state.history=state.history.slice(0,50);state.session=null;syncBgm();save();render()};
+$('start').onclick=()=>{unlockAudio();if(state.session){state.session.runningSince=now()}else{state.session=createSession()}save();syncBgm(true);render();if(menuOpen)menuRender()};
+$('pause').onclick=()=>{let s=state.session;if(!s||!s.runningSince)return;settle();s.elapsedMs+=Math.max(0,now()-s.runningSince);s.runningSince=null;save();render();if(menuOpen)menuRender()};
+$('finish').onclick=()=>{let s=state.session;if(!s)return;settle();let elapsed=secs();if(!confirm(`${clock(elapsed)} 사냥을 종료하고 ${fmt(s.earnedXp)} EXP / ${fmt(s.earnedGold)} G를 정산할까요?`))return;settle();s=state.session;state.achievements[s.zone].seconds+=Math.floor(secs());state.achievements[s.zone].xp+=s.earnedXp;state.achievements[s.zone].gold+=s.earnedGold;state.totalSeconds+=Math.floor(secs());state.totalXp+=s.earnedXp;state.totalGold+=s.earnedGold;state.history.unshift({date:new Date().toLocaleDateString('ko-KR'),subject:ZONES[s.zone].name,seconds:Math.floor(secs()),xp:s.earnedXp,gold:s.earnedGold});state.history=state.history.slice(0,50);state.session=null;syncBgm();save();render()};
 // Explicit JSON backup/import works across separate PWA/browser storage origins.
 $('backupData').onclick=()=>{
  settle();if(!save()){alert('기록 저장에 실패했습니다. 저장 공간을 확인해 주세요.');return}
- const data={app:'hungno-rpg',version:11,saveSchema:SAVE_SCHEMA,exportedAt:new Date().toISOString(),state:{...state,saveSchema:SAVE_SCHEMA}};
+ const data={app:'hungno-rpg',version:12,saveSchema:SAVE_SCHEMA,exportedAt:new Date().toISOString(),state:{...state,saveSchema:SAVE_SCHEMA}};
  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
- const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='time-garden-save-'+new Date().toISOString().slice(0,10)+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)
+ const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='time-garden-v12-save-'+new Date().toISOString().slice(0,10)+'.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500)
 };
 $('restoreData').onclick=()=>$('restoreFile').click();
 $('restoreFile').addEventListener('change',async ev=>{
@@ -259,7 +308,7 @@ $('restoreFile').addEventListener('change',async ev=>{
  }catch(err){alert('복원 실패: '+err.message)}
 });
 let deferredInstall=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;$('installApp').hidden=false});$('installApp').onclick=async()=>{if(!deferredInstall)return;deferredInstall.prompt();await deferredInstall.userChoice;deferredInstall=null;$('installApp').hidden=true};window.addEventListener('appinstalled',()=>{$('installApp').hidden=true});
-if('serviceWorker'in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=111', {updateViaCache:'none'}).catch(err=>console.warn('오프라인 설치 실패',err)));
+if('serviceWorker'in navigator && location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js?v=121', {updateViaCache:'none'}).catch(err=>console.warn('오프라인 설치 실패',err)));
 document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')save();else render()});window.addEventListener('pagehide',()=>{settle();save()});setInterval(render,250);syncBgm(false);render();
 })();
 </script>
